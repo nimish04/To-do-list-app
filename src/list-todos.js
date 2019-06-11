@@ -1,5 +1,5 @@
 export function DisplayTodoList(response){
-  
+
   var task=[];
     task=response.filter(function(todo){
       return todo.completed !== true;
@@ -14,18 +14,18 @@ export function DisplayTodoList(response){
   
     var element = document.getElementById("task");
 
-    if(task.length == 0)
+    if(task.length === 0)
       element.classList.add("hide"); 
 
-    if(task.length!=0)
+    if(task.length!==0)
       element.classList.remove("hide");
   
     var element1 = document.getElementById("taskdone");
 
-    if(complete.length == 0)
+    if(complete.length === 0)
       element1.classList.add("hide");
 
-    if(complete.length!=0)
+    if(complete.length!==0)
       element1.classList.remove("hide");
 
   var taskToDo="";
