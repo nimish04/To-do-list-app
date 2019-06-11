@@ -1,15 +1,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
-var path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 
-
 var tasks = [];
-
 
 app.post("/addtask", function(req, res) {
 
@@ -31,7 +28,6 @@ app.post("/toggletask", function(req, res) {
       tasks[newid].completed = false;
     else 
       tasks[newid].completed = true;
-
 
         res.send(tasks);
 

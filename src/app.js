@@ -10,7 +10,6 @@ function fetchAllTasks() {
 
     DisplayTodoList(data);
 
-    
     })
   };
 

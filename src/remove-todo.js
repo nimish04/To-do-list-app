@@ -19,5 +19,4 @@ export function getIdOfElement(event){
     }
   var idz = event.target.dataset.id;
   removeTodo(idz);
-
 }
