@@ -28,21 +28,21 @@ export function DisplayTodoList(response){
     if(complete.length!=0)
       element1.classList.remove("hide");
 
-  var text="";
-  var text2="";
+  var taskToDo="";
+  var completedTask="";
 
   for (var i = 0; i < response.length; i++) {
 
 
     if(!response[i].completed)
-      text += "<li data-id=" + i + ">" + response[i].label + "</li>";
+    taskToDo += "<li data-id=" + i + ">" + response[i].label + "</li>";
 
     else 
-      text2 += "<li data-id=" + i + ">" + response[i].label + "</li>";
+    completedTask += "<li data-id=" + i + ">" + response[i].label + "</li>";
   }
 
-    document.getElementById("demo").innerHTML = text;
-    document.getElementById("completed").innerHTML = text2;
+    document.getElementById("demo").innerHTML = taskToDo;
+    document.getElementById("completed").innerHTML = completedTask;
 
 }
 
